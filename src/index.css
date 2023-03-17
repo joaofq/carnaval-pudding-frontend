@@ -18,3 +18,27 @@ code {
 * {
   font-size: 22px;
 }
+
+.section__subtitle {
+  color: blue;
+  font-size: 1.2em;
+}
+
+.section__text {
+}
+
+.section__quote {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.section__paragraph {
+  margin-top: 50px;
+}
+
+.section__container {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
