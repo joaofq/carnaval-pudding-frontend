@@ -18,7 +18,7 @@ root.render(
 reportWebVitals();
 
 export const api = new Api({ link: 'https://api.akkio.com/api?api_key=', token: '0e6fa5bc-96dc-4e77-9639-f8cec96ce8ed', key: 'DlaaOi8wbv4CYhqrQKny/1' });
-console.log(api.getInfo([{ "Genero": "Feminino", "Idade": 32, "Estado_civil": "Divorciado (a)", "Faixa_renda": "De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)" }]));
+// api.getInfo([{ "Genero": "Feminino", "Idade": 32, "Estado_civil": "Divorciado (a)", "Faixa_renda": "De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)" }]);
 
 const ape = new Api({ link: 'https://api.akkio.com/api?api_key=', token: '0e6fa5bc-96dc-4e77-9639-f8cec96ce8ed', key: 'hyx6eVpX3w5hbcOuyruc/1' });
-console.log(ape.getInfo([{ "Genero": "Masculino", "Esclaridade": "Ensino superior completo", "Estado_civil": "Solteiro (a)", "Faixa_renda": "Nao sabe" }]));
+// ape.getInfo([{ "Genero": "Masculino", "Esclaridade": "Ensino superior completo", "Estado_civil": "Solteiro (a)", "Faixa_renda": "Nao sabe" }]);

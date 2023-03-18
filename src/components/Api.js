@@ -20,17 +20,4 @@ export default class Api {
     })
       .then(res => this._checkResponse(res));
   }
-
-  // setInfo({ Genero, Escolaridade, Estado_civil, Faixa_renda }) {
-  //   return fetch(this._link, {
-  //     method: 'POST',
-  //     headers: {
-  //       authorization: this._token,
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({ 'Genero': Genero, 'Escolaridade': Escolaridade, 'Estado_civil': Estado_civil, 'Faixa_renda': Faixa_renda })
-  //   })
-  //     .then(res => this._checkResponse(res))
-  // }
-
 }
