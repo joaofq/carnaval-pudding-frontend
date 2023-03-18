@@ -16,7 +16,6 @@ function Quizz() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const data = await api.getInfo([formData]);
-    // console.log(data, data[0], data[0].bloco, data.index, data.bloco)
     abacate(`Você deve ir para o bloco ${data[0].bloco}`);
   }
 
@@ -27,7 +26,7 @@ function Quizz() {
     const formState = forms['estado_civil'];
     const formRent = forms['faixa_renda'];
     const formButton = forms.formButton;
-    if (formGen.value && formAge.value && formState.value && formRent.value)
+    if (formGen.value && formAge.value && formState.value && formRent.value && formAge >= 14 && formAge <= 150)
       formButton.disabled = false;
     else
       formButton.disabled = true;
