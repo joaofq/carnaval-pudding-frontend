@@ -1,4 +1,9 @@
 .general {
   margin: 90px auto;
-  max-width: 80%;
+}
+
+.general__divisor {
+  background: url('../../images/pessoasjovens.jpg');
+  background-size: cover;
+  height: 550px;
 }
