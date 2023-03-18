@@ -33,6 +33,7 @@
   border-radius: .3125rem;
   text-align: center;
   border-style: none;
+  cursor: pointer;
 }
 
 .form__label {
@@ -136,5 +137,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }

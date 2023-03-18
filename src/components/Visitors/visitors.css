@@ -9,7 +9,6 @@
 .visitors__container {
   padding: 2%;
   border-radius: .3125rem;
-  background-color: coral;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +17,8 @@
 }
 
 .visitors__divisor {
-  background-image: url(../../images/blocoderua.jpg);
+  background-image: url(../../images/dancandoSemFundo.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -26,14 +26,40 @@
 }
 
 .visitors__end-image {
-  margin-top: 45px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   width: 100%;
-  height: 150px;
-  background: url(../../images/confetes.jpg);
+  min-height: 18.75rem;
+  background-image: url(../../images/dancandoSemFundo.png);
+  background-size: 70%;
 }
 
 .visitors__figure {
-  background-color: steelblue;
   padding: 2%;
   border-radius: .3125rem;
+}
+
+@media screen and (min-width: 20rem) and (max-width: 767px) {
+  .visitors__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    max-width: 96%;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+    height: auto;
+    border-radius: 0 0 .3125rem .3125rem;
+  }
+
+  .visitors__end-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 18.75rem;
+    background-image: url(../../images/dancandoSemFundo.png);
+  }
 }

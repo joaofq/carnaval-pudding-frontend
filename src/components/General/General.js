@@ -1,5 +1,6 @@
 import './general.css';
 import graficoteste from '../../images/graficoteste.png';
+import dancando from '../../images/dancandoSemFundo.png';
 
 function General() {
   return (
@@ -47,7 +48,7 @@ function General() {
           </p>
         </div>
       </div>
-      <div className="general__divisor"></div>
+      <img className={dancando} />
     </div>
   );
 }

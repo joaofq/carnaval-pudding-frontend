@@ -1,5 +1,6 @@
 import './visitors.css';
 import graficoteste from '../../images/graficoteste.png';
+import canseiDeInventarNomeParaImagem from '../../images/3393284.png';
 
 function Visitors() {
   return (
@@ -33,7 +34,6 @@ function Visitors() {
             <img src={graficoteste} className="chart" />
           </div>
         </div>
-        <div className="visitors__divisor"></div>
         <h1 className="section__title">
           É de fora? Não tem problema, pegue seu glitter e vem com a gente!
         </h1>
@@ -87,6 +87,7 @@ function Visitors() {
         <div className="big-chart">
           <img src={graficoteste} className="chart" />
         </div>
+        <img className='section__image' alt='dança' src={canseiDeInventarNomeParaImagem} />
         <div className='visitors__figure'>
           <h1 className="section__title">3 figuras carimbadas do Carnaval de BH</h1>
           <h2 className="section__subtitle">👑 Coroas</h2>
@@ -111,7 +112,7 @@ function Visitors() {
           </p>
         </div>
       </div>
-      <div className="visitors__end-image"></div>
+      <div className='visitors__end-image'></div>
     </section>
   );
 }

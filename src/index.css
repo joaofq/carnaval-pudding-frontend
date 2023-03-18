@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffe085;
+  background-color: #fedd74;
 }
 
 code {
@@ -20,24 +20,21 @@ code {
 }
 
 .section__title {
-  margin-top: 50px;
-  color: cornsilk;
+  color: black;
   font-size: 2.5em;
 }
 
 .section__subtitle {
-  margin-top: 50px;
-  color: cornsilk;
+  color: black;
   font-size: 1.2em;
 }
 
 .section__text {
-  background-color: steelblue;
   max-width: 500px;
 }
 
 .section__quote {
-  color: cornsilk;
+  color: black;
   margin-top: 50px;
   font-weight: bold;
 }
@@ -45,17 +42,16 @@ code {
 .section__paragraph {
   margin: 0 auto;
   margin-top: 50px;
-  color: cornsilk;
+  color: black;
   margin-bottom: 1rem;
 }
 
 .section__paragraph a {
-  color: darkblue;
+  color: black;
   text-decoration: none;
 }
 
 .section__container {
-  background-color: coral;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -66,7 +62,6 @@ code {
 }
 
 .section__chart {
-  background-color: coral;
   max-width: 500px;
   padding: 0;
   margin-top: 50px;
@@ -79,4 +74,8 @@ code {
 
 .big-chart {
   margin-top: 50px;
+}
+
+.section__image {
+  width: 100%;
 }
