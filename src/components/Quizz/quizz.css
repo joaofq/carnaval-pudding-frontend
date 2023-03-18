@@ -1,9 +1,23 @@
-/* .quizz {} */
+.quizz {
+  color: white;
+  width: 100%;
+  margin: 0;
+  background-color: cornflowerblue;
+  padding-top: 5%;
+}
+
+.quizz__title {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  width: 100%;
+}
 
 .quizz__container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .form {
@@ -16,17 +30,28 @@
 .form__select {
   width: 20.4375rem;
   height: 3.125rem;
+  border-radius: .3125rem;
+  text-align: center;
   border-style: none;
 }
 
 .form__label {
   margin-right: 1rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: black;
 }
 
 .form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.375rem;
+  margin: 0;
+}
+
+.result__title,
+.result__subtitle,
+.result__text {
+  margin: 0;
 }
 
 .form__button {
@@ -39,12 +64,77 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.form__button:hover {
+  cursor: pointer;
+  filter: invert();
+  color: white;
+}
+
 .form__button__container {
   display: flex;
   align-self: center;
 }
 
-.form__button_disabled {
+.form__button_disabled,
+.form__button_disabled:hover {
+  cursor: default;
   background-color: aliceblue;
   color: slategray;
+  filter: unset;
+}
+
+.result__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: right;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 100%;
+  color: white;
+  padding: 5%;
+  border-radius: .3125rem;
+}
+
+.form__error {
+  font-size: .625rem;
+  color: crimson;
+  margin-bottom: -0.625rem;
+}
+
+.form__error_disabled {
+  display: none;
+}
+
+.form__input_error {
+  border: 2px solid crimson;
+  color: crimson;
+}
+
+.input__container {
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 20rem) and (max-width: 767px) {
+  .form__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form__select {
+    width: 80%;
+  }
+
+  .input__container {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,9 +1,15 @@
 import './header.css';
 import mascaraheader from '../../images/mascaraheader.png';
+import React, { useState, useRef, useEffect } from 'react';
+import flamula from '../../images/flamula.jpg'
 
 function Header() {
+  const setHeaderBackground = () => {
+    const header = document.querySelector('#header');
+    header.style.backgroundImage = `url(${flamula})`;
+  };
   return (
-    <div className="header">
+    <div id="header" className="header" ref={setHeaderBackground}>
       <img
         src={mascaraheader}
         alt="Máscara amarela"
