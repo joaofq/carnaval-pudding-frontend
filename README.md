@@ -30,4 +30,8 @@ Foram utilizados dados coletados durante o carnaval de BH de 2018 para análise 
 
 A aplicação web foi desenvolvida utilizando React para a criação de interfaces de usuário interativas e responsivas. Para a integração com os modelos de machine learning e a realização de consultas a bancos de dados, foi utilizado o Flask em Python.
 
-•	 Nossos nomes completos
+•	 Diêgo Laurentino de Carvalho
+•	 Gabriel Aguiar Leão Veras Gomes
+•	 Matheus Alves Evaristo
+•	 Nuno Miguel de Jesus Machado
+•	 
