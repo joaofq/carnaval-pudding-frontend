@@ -1,5 +1,4 @@
-.quizz {
-}
+/* .quizz {} */
 
 .quizz__container {
   display: flex;
@@ -43,4 +42,9 @@
 .form__button__container {
   display: flex;
   align-self: center;
+}
+
+.form__button_disabled {
+  background-color: aliceblue;
+  color: slategray;
 }
