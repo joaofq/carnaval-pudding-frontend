@@ -1,67 +1,86 @@
 import './quizz.css';
+import React, { useState, useRef } from 'react';
+import { api } from '../..';
 
 function Quizz() {
-  // const [genero, setGenero] = useState('');
-  // const [escolaridade, setEscolaridade] = useState('');
-  // const [estadoCivil, setEstadoCivil] = useState('');
-  // const [renda, setRenda] = useState('');
-  // const resposta = {
-  //   genero,
-  //   escolaridade,
-  //   estadoCivil,
-  //   renda
-  // };
-  // console.log(resposta);
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  // Foi mal ae meu nobre que está trabalhando nisso, pedi para o chata gpt converter meus forms elements, mas ele entregou isso que não funciona :I
+  const [formData, setFormData] = useState({});
+  // const pRef = useRef(null);
+
+  const handleInputChange = (event) => {
+    const value = event.target.name === 'idade' ? parseInt(event.target.value) : event.target.value;
+    setFormData({
+      ...formData,
+      [event.target.name]: value,
+    });
+  };
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    const data = await api.getInfo([formData]);
+    abacate(`Você deve ir para o bloco ${data[0].bloco}`);
+  }
+
+  const formValidator = () => {
+    const forms = document.forms['form'];
+    const formGen = forms.genero;
+    const formAge = forms.idade;
+    const formState = forms['estado_civil'];
+    const formRent = forms['faixa_renda'];
+    const formButton = forms.formButton;
+    if (formGen.value && formAge.value && formState.value && formRent.value && formAge >= 14 && formAge <= 150)
+      formButton.disabled = false;
+    else
+      formButton.disabled = true;
+  }
+
+  const abacate = (arg) => document.querySelector('#text').textContent = `${arg}`;
+
   return (
-    <div className="quizz">
-      <h1 className="section__title">Quizz</h1>
-      <p className="section__paragraph">
-        Com certeza você se divertirá no carnaval, mas qual o bloquinho perfeito
-        pra você?
-      </p>
-      <htmlForm className="form">
-        <div>
-          <label htmlhtmlFor="genero">Gênero</label>
-          <select id="genero" name="genero">
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-            <option value="Homossexual">Homossexual</option>
-            <option value="Outro">Outro</option>
-          </select>
-          <label htmlhtmlFor="escolaridade">Escolaridade</label>
-          <select id="escolaridade" name="escolaridade">
-            <option value="fundamental">Fundamental</option>
-            <option value="medio">Ensino Médio</option>
-            <option value="superior incompleto">
-              Ensino Superior Incompleto
-            </option>
-            <option value="superior completo">Ensino Superior Completo</option>
-            <option value="outro">Outro</option>
-          </select>
-        </div>
-        <div>
-          <label htmlhtmlFor="estado civil">Estado Civil</label>
-          <select id="estadoCivil" name="estadoCivil">
-            <option value="soleitro">Solteiro</option>
-            <option value="casado">Casado</option>
-          </select>
-          <label htmlhtmlFor="renda">Faixa de Renda</label>
-          <select id="renda" name="renda">
-            <option value="Nao sabe">Não sei</option>
-            <option value="Prefiro nao inhtmlFormar">
-              Prefiro Não inhtmlFormar
-            </option>
-            <option value="1">até 1 salário</option>
-            <option value="2">até 2 salários</option>
-            <option value="3">até 3 salários</option>
-            <option value="outro">outro</option>
-          </select>
-        </div>
-        <button type="submit">Enviar</button>
-      </htmlForm>
+    <div className='quizz'>
+      <h1>Eu sou quizz</h1>
+      <div className='quizz__container'>
+        <form className='form' name='form' onSubmit={handleFormSubmit} onChange={formValidator}>
+          <div className='form__container'>
+            <label htmlFor='genero' className='form__label'>Gênero</label>
+            <select id='genero' name='genero' className='form__select' onChange={handleInputChange}>
+              <option disabled>Selecione</option>
+              <option value='Masculino'>Masculino</option>
+              <option value='Feminino'>Feminino</option>
+            </select>
+          </div>
+          <div className='form__container'>
+            <label htmlFor='idade' className='form__label'>Idade</label>
+            <input id='idade' name='idade' className='form__select' onChange={handleInputChange} />
+          </div>
+          <div className='form__container'>
+            <label htmlFor='estado_civil' className='form__label'>Estado Civil</label>
+            <select id='estado_civil' name='estado_civil' className='form__select' onChange={handleInputChange}>
+              <option disabled>Selecione</option>
+              <option value='Solteiro (a)'>Solteiro (a)</option>
+              <option value='Casado (a)'>Casado (a)</option>
+              <option value='Divorciado (a)'>Divorciado (a)</option>
+              <option value='Viuvo (a)'>Viuvo (a)</option>
+              <option value='Outro'>Outro</option>
+            </select>
+          </div>
+          <div className='form__container'>
+            <label htmlFor='faixa_renda' className='form__label'>Faixa de Renda</label>
+            <select id='faixa_renda' name='faixa_renda' className='form__select' onChange={handleInputChange}>
+              <option disabled>Selecione</option>
+              <option value='Até um salário mínimo (R$ 954,00)'>Até um salário mínimo (R$ 954,00)</option>
+              <option value='De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)'>De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)</option>
+              <option value='De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)'>De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)</option>
+              <option value='De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)'>De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)</option>
+              <option value='Acima de 8 salários (acima de R$ 7.632,00)'>Acima de 8 salários (acima de R$ 7.632,00)</option>
+            </select>
+          </div>
+          <div className='form__button__container'>
+            <button type='submit' name="formButton" className='form__button' disabled>Enviar</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <p id="text" ref={abacate}></p>
+      </div>
     </div>
   );
 }
