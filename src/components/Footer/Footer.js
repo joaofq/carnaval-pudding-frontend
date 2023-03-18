@@ -3,7 +3,11 @@ import './footer.css';
 function Footer() {
   return (
     <div className="footer">
-      <h1>Eu sou Footer</h1>
+      <p>
+        Desenvolvido por: Diego, Gabriel, Haina, Izaque, João Fernando, Matheus,
+        Maycon, Nuno.
+      </p>
+      <p>1º Hackatoon da Practicum - Brasil</p>
     </div>
   );
 }

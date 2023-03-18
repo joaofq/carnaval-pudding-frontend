@@ -1,13 +1,14 @@
 @import url(./vendor/normalize.css);
 
 body {
-  margin: 0;
+  max-width: 1280px;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f2c84c;
+  background-color: #ffe085;
 }
 
 code {
@@ -17,4 +18,55 @@ code {
 
 * {
   font-size: 22px;
+}
+
+.section__title {
+  margin-top: 50px;
+  color: blue;
+  font-size: 2.5em;
+}
+
+.section__subtitle {
+  margin-top: 50px;
+  color: blue;
+  font-size: 1.2em;
+}
+
+.section__text {
+  max-width: 500px;
+}
+
+.section__quote {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.section__paragraph {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.section__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.section__chart {
+  max-width: 500px;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.chart {
+  width: 100%;
+  max-width: 600px;
+}
+
+.big-chart {
+  margin-top: 50px;
 }

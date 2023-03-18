@@ -1,3 +1,9 @@
 .general {
-  border: 1px solid green;
+  margin: 90px auto;
+}
+
+.general__divisor {
+  background: url('../../images/pessoasjovens.jpg');
+  background-size: cover;
+  height: 550px;
 }
