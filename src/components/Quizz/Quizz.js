@@ -15,6 +15,7 @@ function Quizz() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log(formData);
     console.log(api.getInfo([formData]))
   }
   return (
@@ -23,20 +24,20 @@ function Quizz() {
       <div className='quizz__container'>
         <form className='form' name='form' onSubmit={handleFormSubmit}>
           <div className='form__container'>
-            <label htmlFor='Genero' className='form__label'>Gênero</label>
-            <select id='Genero' name='Genero' className='form__select' onChange={handleInputChange}>
+            <label htmlFor='genero' className='form__label'>Gênero</label>
+            <select id='genero' name='genero' className='form__select' onChange={handleInputChange}>
               <option disabled>Selecione</option>
               <option value='Masculino'>Masculino</option>
               <option value='Feminino'>Feminino</option>
             </select>
           </div>
           <div className='form__container'>
-            <label htmlFor='Idade' className='form__label'>Idade</label>
-            <input id='Idade' name='Idade' className='form__select' onChange={handleInputChange} />
+            <label htmlFor='idade' className='form__label'>Idade</label>
+            <input id='idade' name='idade' className='form__select' onChange={handleInputChange} />
           </div>
           <div className='form__container'>
-            <label htmlFor='Estado_civil' className='form__label'>Estado Civil</label>
-            <select id='Estado_civil' name='Estado_civil' className='form__select' onChange={handleInputChange}>
+            <label htmlFor='estado_civil' className='form__label'>Estado Civil</label>
+            <select id='estado_civil' name='estado_civil' className='form__select' onChange={handleInputChange}>
               <option disabled>Selecione</option>
               <option value='Solteiro (a)'>Solteiro (a)</option>
               <option value='Casado (a)'>Casado (a)</option>
@@ -46,8 +47,8 @@ function Quizz() {
             </select>
           </div>
           <div className='form__container'>
-            <label htmlFor='Faixa_renda' className='form__label'>Faixa de Renda</label>
-            <select id='Faixa_renda' name='Faixa_renda' className='form__select' onChange={handleInputChange}>
+            <label htmlFor='faixa_renda' className='form__label'>Faixa de Renda</label>
+            <select id='faixa_renda' name='faixa_renda' className='form__select' onChange={handleInputChange}>
               <option disabled>Selecione</option>
               <option value='Até um salário mínimo (R$ 954,00)'>Até um salário mínimo (R$ 954,00)</option>
               <option value='De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)'>De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)</option>
