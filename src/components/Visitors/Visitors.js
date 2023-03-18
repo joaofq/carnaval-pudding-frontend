@@ -1,6 +1,6 @@
 import './visitors.css';
 import graficoteste from '../../images/graficoteste.png';
-import canseiDeInventarNomeParaImagem from '../../images/3393284.png';
+import canseiDeInventarNomeParaImagem from '../../images/pessoasDancando.jpg';
 
 function Visitors() {
   return (
