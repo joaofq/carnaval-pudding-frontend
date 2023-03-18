@@ -12,7 +12,6 @@ export default class Api {
   }
 
   getInfo(data) {
-    console.log(data)
     const encodedData = encodeURIComponent(JSON.stringify(data));
     return fetch(`${this._link}${this._token}&flow_key=${this._key}&data=${encodedData}`, {
       headers: {
