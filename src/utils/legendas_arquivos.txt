@@ -1,0 +1,14 @@
+Análise geral:
+aval_bloco.json = avaliação média por bloco, gráfico de barras
+aval_genero.json = avaliação média por gênero, gráfico de barras
+aval_idade.json = avaliação média por idade, gráfico de barras
+aval_nivel_de_gastos.json = avaliação média por nível de gastos, gráfico de barras
+aval_renda.json = avaliação média por faixa de renda, gráfico de barras
+estado_civil.json = proporção por estado civil, gráfico de pizza
+
+Análise dos visitantes: 
+hospedagem_paga.json = gasto total de quem pagou e quem não pagou hospedagem, gráfico de barras
+hospedagem_tipo.json = proporção de cada tipo de hospedagem, gráfico de pizza
+percentual_tipo_de_gasto.json = percentual do gasto total por tipo de gasto, gráfico de barras
+regioes.json = quantidade de pessoas por região, gráfico de pizza
+transporte_tipo = quantidade de pessoas por tipo de transporte utilizado, gráfico de pizza
