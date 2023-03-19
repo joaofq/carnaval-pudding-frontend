@@ -2,6 +2,9 @@ import Chart from 'react-apexcharts';
 
 function PeoplesTransportationChart() {
   const options = {
+    stroke: {
+      width: 0,
+    },
     colors: ['#0455BF', '#05C7F2', '#EEAF24', '#0468BF', '#D95204'],
     labels: ['Avião', 'Carro', 'Trem', 'Uber/Taxi/Carona', 'Ônibus'],
     plotOptions: {
@@ -22,12 +25,14 @@ function PeoplesTransportationChart() {
     title: {
       text: 'Meios de transporte utilizados pelos visitantes',
       align: 'center',
+      margin: 20,
       style: {
         fontSize: '14px',
         fontWeight: 'bold',
         color: '#263238',
       },
     },
+    legend: { offsetY: 20 },
   };
 
   const series = [26, 87, 10, 17, 71];
