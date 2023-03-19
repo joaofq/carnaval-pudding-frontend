@@ -6,3 +6,9 @@
   background-color: #0455bf;
   color: white;
 }
+
+.footer a {
+  color: bisque;
+  cursor: pointer;
+  text-decoration: none;
+}
