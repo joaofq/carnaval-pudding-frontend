@@ -33,6 +33,10 @@ function PeoplesRegionChart() {
       },
     },
     legend: { offsetY: 20 },
+    accessibility: {
+      enabled: true,
+      description: 'Gráfico de barras de avaliação geral por faixa etária',
+    },
   };
 
   const series = [7, 13, 1, 28, 5];

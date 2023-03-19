@@ -32,6 +32,10 @@ function SpentCategoriesChart() {
     legend: {
       show: false,
     },
+    accessibility: {
+      enabled: true,
+      description: 'Gráfico de barras de gastos dos visitantes por categoria',
+    },
   };
 
   const series = [

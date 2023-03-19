@@ -131,12 +131,27 @@ function Quizz() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const formButton = formRef.current.querySelector('button[name="formButton"]');
+    const inputGen = formRef.current.querySelector('#genero');
+    const inputAge = formRef.current.querySelector('#idade');
+    const inputEstado = formRef.current.querySelector('#estado_civil');
+    const inputRenda = formRef.current.querySelector('#faixa_renda');
     formButton.textContent = 'Carregando';
     formButton.nextElementSibling.nextElementSibling.classList.remove('button__loading_disabled');
     formButton.parentElement.parentElement.parentElement.nextElementSibling.classList.add('button__loading_disabled')
     const data = await api.getInfo([formData]);
-    if (typeof data[0].bloco === "string" && data[0].bloco.trim() !== "")
+    if (typeof data[0].bloco === "string" && data[0].bloco.trim() !== "") {
       setTextInPage(`Você deve ir para ${data[0].bloco}`);
+      setFormData({
+        genero: null,
+        idade: null,
+        estado_civil: null,
+        faixa_renda: null,
+      });
+      inputGen.selectedIndex = 'null';
+      inputAge.value = '';
+      inputEstado.selectedIndex = 'null';
+      inputRenda.selectedIndex = 'null';
+    }
   }
 
   useEffect(() => {
@@ -156,7 +171,6 @@ function Quizz() {
     const subTitleElement = document.querySelector('#subTitle');
     const titleElement = document.querySelector('#title');
     setterManager(titleElement, subTitleElement, textElement, arg);
-
   }
 
   const setterManager = (titleElement, subTitleElement, textElement, arg) => {
@@ -207,7 +221,7 @@ function Quizz() {
   return (
     <div className='quizz'>
       <h2 className='quizz__title'>Descubra qual é o seu bloco ideal</h2>
-
+      <h3>Repita quantas vezes quiser</h3>
       <div className='quizz__container'>
         <form className='form' name='form' onSubmit={handleFormSubmit} ref={formRef}>
           <div className='inputs__container'>
