@@ -10,6 +10,7 @@
   /* background-image: url(../../images/confete-em-fundo-amarelo-depois-da-festa.jpg); */
   background-image: url(../../images/confetti-que-fazem-um-circulo.jpg);
   margin-bottom: 0;
+  box-shadow: 0px 5px 5px -5px black;
 }
 
 
