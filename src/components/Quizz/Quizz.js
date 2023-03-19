@@ -192,7 +192,6 @@ function Quizz() {
       titleElement.textContent = arg;
   }
 
-
   return (
     <div className='quizz'>
       <h2 className='quizz__title'>Quizz</h2>
@@ -212,7 +211,7 @@ function Quizz() {
                 <label htmlFor='idade' className='form__label'>Idade</label>
                 <div className='input__container'>
                   <input id='idade' name='idade' className='form__select' onChange={handleInputChange} />
-                  <span id='age__error' className='form__error form__error_disabled'>A idade deve ser um número inteiro maior que 0 e menor que 150</span>
+                  <span id='age__error' className='form__error form__error_disabled'>A idade deve ser um número inteiro maior que 0 e menor que 200</span>
                 </div>
               </div >
             </div>
