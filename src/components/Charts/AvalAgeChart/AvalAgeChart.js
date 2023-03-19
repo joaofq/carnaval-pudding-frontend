@@ -13,7 +13,7 @@ function AvalGeneroChart() {
     dataLabels: {
       enabled: false,
     },
-    colors: ['#0455BF', '#05C7F2', '#D95204'],
+    colors: ['#0455BF', '#05C7F2', '#D95204', '#EEAF24'],
     plotOptions: {
       bar: {
         distributed: true,

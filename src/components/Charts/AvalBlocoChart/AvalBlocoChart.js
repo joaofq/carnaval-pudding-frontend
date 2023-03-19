@@ -1,30 +1,18 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/avalBloco.js';
 
 function AvalBlocoChart() {
+  const categories = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num * 10) / 10;
+  });
+
   const options = {
-    xaxis: {
-      categories: [
-        'Alô Abacaxi',
-        'Baianas Ozadas',
-        'Batiza',
-        'Beiço do Wando',
-        'Angola Janga',
-        'Despedida de Carnaval',
-        'Bloco Havayanas Usadas',
-        'Bloco da Calixto',
-        'Bloco é o Amô',
-        'Então Brilha',
-        'Funk You',
-        'Juventude Bronzeada',
-        'Monobloco',
-        'Quando come se lambuza',
-        'Tchanzinho Zona Norte',
-      ],
-    },
+    xaxis: { categories: categories },
     dataLabels: {
       enabled: false,
     },
-    colors: ['#0455BF', '#05C7F2', '#D95204'],
+    colors: ['#0455BF', '#05C7F2', '#D95204', '#0468BF', '#EEAF24'],
     plotOptions: {
       bar: {
         distributed: true,
@@ -44,14 +32,7 @@ function AvalBlocoChart() {
     },
   };
 
-  const series = [
-    {
-      data: [
-        5.3, 5.1, 5.6, 6.5, 4.5, 5.9, 7.0, 5.1, 5.3, 5.7, 5.0, 5.2, 4.3, 4.4,
-        6.2,
-      ],
-    },
-  ];
+  const series = [{ data: seriesData }];
 
   return <Chart options={options} series={series} type='bar' width='100%' />;
 }
