@@ -133,16 +133,11 @@ function Quizz() {
     const formButton = formRef.current.querySelector(
       'button[name="formButton"]'
     );
-    const formButton = formRef.current.querySelector('button[name="formButton"]');
     const inputGen = formRef.current.querySelector('#genero');
     const inputAge = formRef.current.querySelector('#idade');
     const inputEstado = formRef.current.querySelector('#estado_civil');
     const inputRenda = formRef.current.querySelector('#faixa_renda');
     formButton.textContent = 'Carregando';
-    formButton.nextElementSibling.classList.remove('button__loading_disabled');
-    formButton.parentElement.parentElement.parentElement.nextElementSibling.classList.add(
-      'button__loading_disabled'
-    );
     formButton.nextElementSibling.nextElementSibling.classList.remove(
       'button__loading_disabled'
     );
@@ -150,9 +145,8 @@ function Quizz() {
       'button__loading_disabled'
     );
     const data = await api.getInfo([formData]);
-    if (typeof data[0].bloco === 'string' && data[0].bloco.trim() !== '')
+    if (typeof data[0].bloco === 'string' && data[0].bloco.trim() !== '') {
       setTextInPage(`Você deve ir para ${data[0].bloco}`);
-  };
       setFormData({
         genero: null,
         idade: null,
@@ -164,7 +158,7 @@ function Quizz() {
       inputEstado.selectedIndex = 'null';
       inputRenda.selectedIndex = 'null';
     }
-  }
+  };
 
   useEffect(() => {
     const { genero, idade, estado_civil, faixa_renda } = formData;
