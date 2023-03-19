@@ -22,6 +22,8 @@ Este projeto tem como objetivo analisar dados coletados em uma pesquisa realizad
 
 - React ⚛️
 
+- ApexCharts 📊
+
 - Scikit-learn 🧠
 
 - Pandas 🐼
@@ -30,13 +32,13 @@ Este projeto tem como objetivo analisar dados coletados em uma pesquisa realizad
 
 Foram utilizados dados coletados durante o carnaval de BH de 2018 para análise e desenvolvimento de modelos de machine learning. Algumas das técnicas utilizadas foram:
 
-- Análise exploratória de dados; 🕵️‍;
-- Clusterização;
-- Redes neurais artificiais.
+- Análise exploratória de dados: [geral](carnaval-pudding-frontend/DA_DS/Análises/Codigo_analise_geral.ipynb) e [visitantes] (carnaval-pudding-frontend/DA_DS/Análises/Analise_visitantes.ipynb);
+- [Clusterização](https://github.com/hainaha/carnaval-pudding-frontend/blob/main/clustering.ipynb);
+- Machine Learning.
 
 ### Desenvolvimento Web🌐
 
-A página web foi desenvolvida utilizando React para a criação de interfaces de usuário interativas e responsivas. Para a integração com os modelos de machine learning e a realização de consultas a bancos de dados, foi utilizada a API gerada pelo flask.
+A página web foi desenvolvida utilizando React para a criação de interfaces de usuário interativas e responsivas. Para a integração com os modelos de machine learning e a realização de consultas a bancos de dados, foi utilizada a API hospedada na ferramenta Akkio.
 
 #### Figma Layout
 
@@ -50,7 +52,7 @@ O layout foi construído no figma e depois implementado em React.
 
 ### Melhorias para o projeto
 
-Como uma melhoria, o projeto poderia ampliar a base de dados acrescentando dados de pesquisas realizadas em outros anos.
+Como uma melhoria, o projeto poderia ampliar a base de dados acrescentando dados de pesquisas realizadas em outros anos e analisar fontes de hipóteses como a geolocalização. Por exemplo, seria possível avaliar se a presença em um bloco influencia a participação em outros, ou se há potencial para aumentar a participação em outras áreas da cidade. Essas informações são cruciais para o planejamento de eventos futuros e podem auxiliar na melhoria da experiência dos foliões e fortalecimento dos blocos.
 
 ### Equipe
 
