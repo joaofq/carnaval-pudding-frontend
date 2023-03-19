@@ -87,3 +87,10 @@ code {
     max-width: 500px;
   }
 }
+
+@media screen and (max-width: 1016px) {
+  .section__chart {
+    width: 100%;
+    max-width: 500px;
+  }
+}
