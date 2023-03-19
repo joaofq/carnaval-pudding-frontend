@@ -35,15 +35,7 @@ function AvalGeneroChart() {
     },
   ];
 
-  return (
-    <Chart
-      options={options}
-      series={series}
-      type='bar'
-      width='500px'
-      height='400px'
-    />
-  );
+  return <Chart options={options} series={series} type='bar' width='100%' />;
 }
 
 export default AvalGeneroChart;

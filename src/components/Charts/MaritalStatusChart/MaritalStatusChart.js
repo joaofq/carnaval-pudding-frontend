@@ -24,6 +24,9 @@ function MaritalStatusChart() {
         },
         distributed: true,
       },
+      stroke: {
+        width: 0,
+      },
     },
     title: {
       text: 'Percentual de foliões de cada estado civil',
@@ -38,15 +41,7 @@ function MaritalStatusChart() {
 
   const series = [309, 72, 1174, 15, 11];
 
-  return (
-    <Chart
-      options={options}
-      series={series}
-      type='pie'
-      width='500px'
-      height='400px'
-    />
-  );
+  return <Chart options={options} series={series} type='pie' width='100%' />;
 }
 
 export default MaritalStatusChart;

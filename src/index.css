@@ -58,6 +58,7 @@ code {
 }
 
 .section__chart {
+  width: 50%;
   max-width: 500px;
   padding: 0;
   margin-top: 50px;
@@ -70,7 +71,15 @@ code {
 }
 
 .big-chart {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 1016px) {
+  .section__chart {
+    width: 100%;
+    max-width: 500px;
+  }
 }

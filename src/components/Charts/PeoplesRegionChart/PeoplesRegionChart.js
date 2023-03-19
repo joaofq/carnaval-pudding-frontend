@@ -32,15 +32,7 @@ function PeoplesRegionChart() {
 
   const series = [7, 13, 1, 28, 5];
 
-  return (
-    <Chart
-      options={options}
-      series={series}
-      type='pie'
-      width='500px'
-      height='400px'
-    />
-  );
+  return <Chart options={options} series={series} type='pie' width='100%' />;
 }
 
 export default PeoplesRegionChart;
