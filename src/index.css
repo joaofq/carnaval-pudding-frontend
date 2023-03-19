@@ -1,14 +1,14 @@
 @import url(./vendor/normalize.css);
 
 body {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffe085;
+  background-color: #fedd74;
 }
 
 code {
@@ -45,6 +45,7 @@ code {
   margin: 0 auto;
   margin-top: 50px;
   font-size: 22px;
+  text-align: justify;
 }
 
 .section__container {
@@ -75,6 +76,13 @@ code {
   max-width: 600px;
   margin: 0 auto;
   padding-top: 50px;
+}
+
+@media screen and (max-width: 1016px) {
+  .section__chart {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 @media screen and (max-width: 1016px) {

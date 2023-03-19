@@ -115,38 +115,27 @@ function Quizz() {
       if (event.target.value > 0 && event.target.value <= 200) {
         event.target.nextElementSibling.classList.add('form__error_disabled');
         event.target.classList.remove('form__input_error');
-      } else {
-        event.target.nextElementSibling.classList.remove(
-          'form__error_disabled'
-        );
+      }
+      else {
+        event.target.nextElementSibling.classList.remove('form__error_disabled');
         event.target.classList.add('form__input_error');
       }
+
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const formButton = formRef.current.querySelector(
-      'button[name="formButton"]'
-    );
+    const formButton = formRef.current.querySelector('button[name="formButton"]');
     formButton.textContent = 'Carregando';
     const data = await api.getInfo([formData]);
-    if (typeof data[0].bloco === 'string' && data[0].bloco.trim() !== '')
+    if (typeof data[0].bloco === "string" && data[0].bloco.trim() !== "")
       setTextInPage(`Você deve ir para ${data[0].bloco}`);
-  };
+  }
 
   useEffect(() => {
     const { genero, idade, estado_civil, faixa_renda } = formData;
-    const formButton = formRef.current.querySelector(
-      'button[name="formButton"]'
-    );
-    if (
-      genero &&
-      idade &&
-      estado_civil &&
-      faixa_renda &&
-      idade >= 0 &&
-      idade <= 200
-    ) {
+    const formButton = formRef.current.querySelector('button[name="formButton"]');
+    if (genero && idade && estado_civil && faixa_renda && idade >= 0 && idade <= 200) {
       formButton.disabled = false;
       formButton.classList.remove('form__button_disabled');
     } else {
@@ -160,116 +149,38 @@ function Quizz() {
     const subTitleElement = document.querySelector('#subTitle');
     const titleElement = document.querySelector('#title');
     setterManager(titleElement, subTitleElement, textElement, arg);
-  };
+
+  }
 
   const setterManager = (titleElement, subTitleElement, textElement, arg) => {
-    if (
-      titleElement &&
-      subTitleElement &&
-      textElement &&
-      arg != '[object HTMLParagraphElement]'
-    ) {
+    if (titleElement && subTitleElement && textElement && arg != '[object HTMLParagraphElement]') {
       if (arg == 'Você deve ir para Baianas Ozadas')
-        theSetterInPage(
-          blocoBahianasOusadas,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoBahianasOusadas, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para MONOBLOCO')
-        theSetterInPage(
-          blocoMonobloco,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoMonobloco, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Entao Brilha')
-        theSetterInPage(
-          blocoEntaoBrilha,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoEntaoBrilha, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Bloco Despedida de Carnaval')
-        theSetterInPage(
-          blocoDespedidaDeCarnaval,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoDespedidaDeCarnaval, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Juventude Bronzeada')
-        theSetterInPage(
-          blocoJuventudeBronzeada,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoJuventudeBronzeada, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Quando come se lambuza')
-        theSetterInPage(
-          blocoQuandoComeSeLambuza,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoQuandoComeSeLambuza, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Bloco Angola Janga')
-        theSetterInPage(
-          blocoAngolaJanga,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoAngolaJanga, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Bloco Havayanas Usadas')
-        theSetterInPage(
-          blocoHavayanasUsadas,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoHavayanasUsadas, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Tchanzinho Zona Norte')
-        theSetterInPage(
-          blocoTchanzinhoZonaNorte,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoTchanzinhoZonaNorte, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Batiza')
-        theSetterInPage(
-          blocoBeijoDoWando,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
+        theSetterInPage(blocoBeijoDoWando, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Outros')
-        theSetterInPage(
-          blocoOutros,
-          subTitleElement,
-          textElement,
-          titleElement,
-          arg
-        );
-    }
-  };
+        theSetterInPage(blocoOutros, subTitleElement, textElement, titleElement, arg);
+    };
+  }
 
-  const theSetterInPage = (
-    bloco,
-    subTitleElement,
-    textElement,
-    titleElement,
-    arg
-  ) => {
-    const formButton = formRef.current.querySelector(
-      'button[name="formButton"]'
-    );
+  const theSetterInPage = (bloco, subTitleElement, textElement, titleElement, arg) => {
+    const formButton = formRef.current.querySelector('button[name="formButton"]');
     formButton.textContent = 'Enviar';
     subTitleElement.textContent = bloco.title;
     textElement.textContent = bloco.text;
@@ -277,126 +188,69 @@ function Quizz() {
       titleElement.textContent = 'Você deve ir para Beijo do Wando';
     if (arg == 'Você deve ir para o bloco Outros')
       titleElement.textContent = 'Você é incrível!';
-    else titleElement.textContent = arg;
-  };
+    else
+      titleElement.textContent = arg;
+  }
 
   return (
     <div className='quizz'>
       <h2 className='quizz__title'>Quizz</h2>
       <div className='quizz__container'>
-        <form
-          className='form'
-          name='form'
-          onSubmit={handleFormSubmit}
-          ref={formRef}
-        >
-          <div className='form__container'>
-            <label htmlFor='genero' className='form__label'>
-              Gênero
-            </label>
-            <select
-              id='genero'
-              name='genero'
-              className='form__select'
-              onChange={handleInputChange}
-              defaultValue='null'
-            >
-              <option value='null' disabled>
-                Selecione
-              </option>
-              <option value='Masculino'>Masculino</option>
-              <option value='Feminino'>Feminino</option>
-            </select>
-          </div>
-          <div className='form__container'>
-            <label htmlFor='idade' className='form__label'>
-              Idade
-            </label>
-            <div className='input__container'>
-              <input
-                id='idade'
-                name='idade'
-                className='form__select'
-                onChange={handleInputChange}
-              />
-              <span
-                id='age__error'
-                className='form__error form__error_disabled'
-              >
-                A idade deve ser um número inteiro maior que 0 e menor que 150
-              </span>
+        <form className='form' name='form' onSubmit={handleFormSubmit} ref={formRef}>
+          <div className='inputs__container'>
+            <div className="input__left">
+              <div className='form__container'>
+                <label htmlFor='genero' className='form__label'>Gênero</label>
+                <select id='genero' name='genero' className='form__select' onChange={handleInputChange} defaultValue="null">
+                  <option value='null' disabled>Selecione</option>
+                  <option value='Masculino'>Masculino</option>
+                  <option value='Feminino'>Feminino</option>
+                </select>
+              </div>
+              <div className='form__container'>
+                <label htmlFor='idade' className='form__label'>Idade</label>
+                <div className='input__container'>
+                  <input id='idade' name='idade' className='form__select' onChange={handleInputChange} />
+                  <span id='age__error' className='form__error form__error_disabled'>A idade deve ser um número inteiro maior que 0 e menor que 200</span>
+                </div>
+              </div >
+            </div>
+            <div className='input__right'>
+              <div className='form__container'>
+                <label htmlFor='estado_civil' className='form__label'>Estado Civil</label>
+                <select id='estado_civil' name='estado_civil' className='form__select' onChange={handleInputChange} defaultValue="null">
+                  <option value='null' disabled>Selecione</option>
+                  <option value='Solteiro (a)'>Solteiro (a)</option>
+                  <option value='Casado (a)'>Casado (a)</option>
+                  <option value='Divorciado (a)'>Divorciado (a)</option>
+                  <option value='Viuvo (a)'>Viuvo (a)</option>
+                  <option value='Outro'>Outro</option>
+                </select>
+              </div>
+              <div className='form__container'>
+                <label htmlFor='faixa_renda' className='form__label'>Faixa de Renda</label>
+                <select id='faixa_renda' name='faixa_renda' className='form__select' onChange={handleInputChange} defaultValue="null">
+                  <option value='null' disabled>Selecione</option>
+                  <option value='Até um salário mínimo (R$ 954,00)'>Até um salário mínimo (R$ 954,00)</option>
+                  <option value='De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)'>De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)</option>
+                  <option value='De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)'>De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)</option>
+                  <option value='De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)'>De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)</option>
+                  <option value='Acima de 8 salários (acima de R$ 7.632,00)'>Acima de 8 salários (acima de R$ 7.632,00)</option>
+                </select>
+              </div >
             </div>
           </div>
-          <div className='form__container'>
-            <label htmlFor='estado_civil' className='form__label'>
-              Estado Civil
-            </label>
-            <select
-              id='estado_civil'
-              name='estado_civil'
-              className='form__select'
-              onChange={handleInputChange}
-              defaultValue='null'
-            >
-              <option value='null' disabled>
-                Selecione
-              </option>
-              <option value='Solteiro (a)'>Solteiro (a)</option>
-              <option value='Casado (a)'>Casado (a)</option>
-              <option value='Divorciado (a)'>Divorciado (a)</option>
-              <option value='Viuvo (a)'>Viuvo (a)</option>
-              <option value='Outro'>Outro</option>
-            </select>
-          </div>
-          <div className='form__container'>
-            <label htmlFor='faixa_renda' className='form__label'>
-              Faixa de Renda
-            </label>
-            <select
-              id='faixa_renda'
-              name='faixa_renda'
-              className='form__select'
-              onChange={handleInputChange}
-              defaultValue='null'
-            >
-              <option value='null' disabled>
-                Selecione
-              </option>
-              <option value='Até um salário mínimo (R$ 954,00)'>
-                Até um salário mínimo (R$ 954,00)
-              </option>
-              <option value='De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)'>
-                De 1 a 2 salários (R$ 954,00 - R$ 1.908,00)
-              </option>
-              <option value='De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)'>
-                De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)
-              </option>
-              <option value='De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)'>
-                De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)
-              </option>
-              <option value='Acima de 8 salários (acima de R$ 7.632,00)'>
-                Acima de 8 salários (acima de R$ 7.632,00)
-              </option>
-            </select>
-          </div>
           <div className='form__button__container'>
-            <button
-              type='submit'
-              name='formButton'
-              className='form__button form__button_disabled'
-              disabled
-            >
-              Enviar
-            </button>
+            <button type='submit' name="formButton" className='form__button form__button_disabled' disabled>Enviar</button>
           </div>
-        </form>
-      </div>
+        </form >
+      </div >
       <div className='result__container'>
         <h3 id='title' className='result__title'></h3>
         <h4 id='subTitle' className='result__subtitle'></h4>
         <p id='text' className='result__text'></p>
       </div>
-    </div>
+    </div >
   );
 }
 

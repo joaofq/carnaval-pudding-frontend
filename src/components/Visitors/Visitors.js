@@ -109,7 +109,7 @@ function Visitors() {
       </p>
       <h2 className='section__subtitle'>💸 Bens-de-vida</h2>
       <p className='section__paragraph'>
-         Solteiros(as) com renda alta, são foliões adultos que frequentam o
+        Solteiros(as) com renda alta, são foliões adultos que frequentam o
         carnaval de Belo Horizonte para curtir o melhor que a festa tem para
         oferecer. Sem ter dinheiro como um empecilho, os bens-de-vida não perdem
         tempo na hora de se divertir.

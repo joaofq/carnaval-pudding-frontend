@@ -4,7 +4,6 @@ import General from './components/General/General';
 import Header from './components/Header/Header';
 import Quizz from './components/Quizz/Quizz';
 import Visitors from './components/Visitors/Visitors';
-import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <General />
       <Visitors />
       <Quizz />
-      <Navbar />
       <Footer />
     </div>
   );
