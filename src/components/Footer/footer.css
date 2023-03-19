@@ -1,7 +1,13 @@
 .footer {
-  margin-top: 90px;
+  box-shadow: 0px -5px 5px -5px black;
+  margin-top: 0;
   margin-bottom: 0;
   padding: 10px;
   background-color: #0455bf;
   color: white;
+}
+
+.footer__link {
+  color: gray;
+  font-size: 9px;
 }
