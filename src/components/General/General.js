@@ -49,7 +49,7 @@ function General() {
           </p>
         </div>
       </div>
-      <div className='general__divisor'></div>
+      <div className='general__divisor' aria-label="pessoas dançando"></div>
     </div>
   );
 }

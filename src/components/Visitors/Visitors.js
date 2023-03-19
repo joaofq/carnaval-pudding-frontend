@@ -114,7 +114,7 @@ function Visitors() {
         oferecer. Sem ter dinheiro como um empecilho, os bens-de-vida não perdem
         tempo na hora de se divertir.
       </p>
-      <div className='visitors__end-image'></div>
+      <div className='visitors__end-image' aria-label="pessoas acenando"></div>
     </div>
   );
 }
