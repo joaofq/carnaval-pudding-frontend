@@ -6,3 +6,8 @@
   background-color: #0455bf;
   color: white;
 }
+
+.footer__link {
+  color: gray;
+  font-size: 9px;
+}

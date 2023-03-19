@@ -2,6 +2,9 @@ import Chart from 'react-apexcharts';
 
 function PeoplesRegionChart() {
   const options = {
+    stroke: {
+      width: 0,
+    },
     colors: ['#D95204', '#0455BF', '#05C7F2', '#EEAF24', '#0468BF'],
     labels: ['Centro-Oeste', 'Nordeste', 'Norte', 'Sudeste', 'Sul'],
     plotOptions: {
@@ -22,12 +25,14 @@ function PeoplesRegionChart() {
     title: {
       text: 'Percentual de foliões por região',
       align: 'center',
+      margin: 20,
       style: {
         fontSize: '14px',
         fontWeight: 'bold',
         color: '#263238',
       },
     },
+    legend: { offsetY: 20 },
   };
 
   const series = [7, 13, 1, 28, 5];

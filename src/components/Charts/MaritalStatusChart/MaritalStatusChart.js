@@ -2,6 +2,9 @@ import Chart from 'react-apexcharts';
 
 function MaritalStatusChart() {
   const options = {
+    stroke: {
+      width: 0,
+    },
     colors: ['#0455BF', '#05C7F2', '#D95204', '#0468BF', '#EEAF24'],
     labels: [
       'Casado (a)',
@@ -24,19 +27,18 @@ function MaritalStatusChart() {
         },
         distributed: true,
       },
-      stroke: {
-        width: 0,
-      },
     },
     title: {
       text: 'Percentual de foliões de cada estado civil',
       align: 'center',
+      margin: 20,
       style: {
         fontSize: '14px',
         fontWeight: 'bold',
         color: '#263238',
       },
     },
+    legend: { offsetY: 20 },
   };
 
   const series = [309, 72, 1174, 15, 11];
