@@ -77,9 +77,9 @@ function Quizz() {
   };
 
   const blocoBeijoDoWando = {
-    title: 'Beijo do Wando',
+    title: 'Beiço do Wando',
     text: `Meu iaiá, meu ioiô, você vai se acabar de paixão no bloco mais brega de Belo Horizonte. Pra
-    provar que nem só de axé vive o Carnaval, o bloco Beijo do Wando já teve até a Gretchen em seu
+    provar que nem só de axé vive o Carnaval, o bloco Beiço do Wando já teve até a Gretchen em seu
     trio elétrico. Além de Wando, músicas de Reginaldo Rossi, Sidney Magal, Roupa Nova, entre
     outros artistas românticos, complementam o repertório durante o cortejo. Tocando nessa festa, há
     uma bateria com 350 integrantes e uma banda com 8.`,
@@ -91,6 +91,11 @@ function Quizz() {
     CARNAVAL INTEIRO! É isso mesmo, não há dúvidas que você vai se divertir muito brincando
     em BH, e a certeza é tanta que te indicamos só ir. Curta o axé, o brega, o funk, o samba sem
     preocupações. Você é de casa!`,
+  };
+
+  const serverError = {
+    title: 'Error',
+    text: 'Sorry, something went wrong with the request. There may be a connection issue or the server may be down. Please try again later.',
   };
 
   const [formData, setFormData] = useState({
@@ -127,6 +132,8 @@ function Quizz() {
     e.preventDefault();
     const formButton = formRef.current.querySelector('button[name="formButton"]');
     formButton.textContent = 'Carregando';
+    formButton.nextElementSibling.classList.remove('button__loading_disabled');
+    formButton.parentElement.parentElement.parentElement.nextElementSibling.classList.add('button__loading_disabled')
     const data = await api.getInfo([formData]);
     if (typeof data[0].bloco === "string" && data[0].bloco.trim() !== "")
       setTextInPage(`Você deve ir para ${data[0].bloco}`);
@@ -176,12 +183,16 @@ function Quizz() {
         theSetterInPage(blocoBeijoDoWando, subTitleElement, textElement, titleElement, arg);
       if (arg == 'Você deve ir para Outros')
         theSetterInPage(blocoOutros, subTitleElement, textElement, titleElement, arg);
-    };
+    }
+    else {
+      theSetterInPage(serverError, subTitleElement, textElement, titleElement, '')
+    }
   }
 
   const theSetterInPage = (bloco, subTitleElement, textElement, titleElement, arg) => {
     const formButton = formRef.current.querySelector('button[name="formButton"]');
     formButton.textContent = 'Enviar';
+    formButton.nextElementSibling.classList.add('button__loading_disabled');
     subTitleElement.textContent = bloco.title;
     textElement.textContent = bloco.text;
     if (arg == 'Você deve ir para Batiza')
@@ -190,11 +201,13 @@ function Quizz() {
       titleElement.textContent = 'Você é incrível!';
     else
       titleElement.textContent = arg;
+    formButton.parentElement.parentElement.parentElement.nextElementSibling.classList.remove('button__loading_disabled');
   }
 
   return (
     <div className='quizz'>
-      <h2 className='quizz__title'>Quizz</h2>
+      <h2 className='quizz__title'>Descubra qual é o seu bloco dieal</h2>
+      <h3>Nenhum dado será coletado</h3>
       <div className='quizz__container'>
         <form className='form' name='form' onSubmit={handleFormSubmit} ref={formRef}>
           <div className='inputs__container'>
@@ -242,6 +255,7 @@ function Quizz() {
           </div>
           <div className='form__button__container'>
             <button type='submit' name="formButton" className='form__button form__button_disabled' disabled>Enviar</button>
+            <div className='button__loading button__loading_disabled'></div>
           </div>
         </form >
       </div >

@@ -17,9 +17,11 @@ code {
 }
 
 .section__title {
-  margin-top: 50px;
   color: #0455bf;
-  font-size: 55px;
+  font-size: 2.25rem;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .section__subtitle {
@@ -42,6 +44,7 @@ code {
   margin-top: 50px;
   font-size: 22px;
   text-align: justify;
+  width: 80%;
 }
 
 .section__container {
@@ -85,5 +88,27 @@ code {
   .section__chart {
     width: 100%;
     max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 20rem) and (max-width: 768px) {
+  .section__paragraph {
+    width: 90%;
+  }
+
+  .section__title {
+    width: 90%;
+  }
+
+  .section__text {
+    width: 100%;
+  }
+
+  .section__subtitle {
+    width: 90%;
+  }
+
+  .section__container {
+    width: 100%;
   }
 }

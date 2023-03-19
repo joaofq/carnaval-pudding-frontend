@@ -8,6 +8,13 @@
 }
 
 .footer__link {
+  color: bisque;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer__credit {
   color: gray;
   font-size: 9px;
 }
+
