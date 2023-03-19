@@ -49,7 +49,7 @@
 .form__select {
   width: 20.4375rem;
   height: 3.125rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   border-radius: 0.3125rem;
   text-align: center;
   border-style: none;
@@ -58,7 +58,8 @@
 
 .form__label {
   margin-right: 1rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .form__container {
@@ -114,6 +115,7 @@
 }
 
 .form__button {
+  border-radius: 0.3125rem;
   width: 13.375rem;
   height: 3.9375rem;
   border-style: none;
@@ -184,7 +186,7 @@
 }
 
 .form__text {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
@@ -222,6 +224,6 @@
   }
 
   .form__label {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
