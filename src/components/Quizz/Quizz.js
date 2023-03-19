@@ -133,6 +133,11 @@ function Quizz() {
     const formButton = formRef.current.querySelector(
       'button[name="formButton"]'
     );
+    const formButton = formRef.current.querySelector('button[name="formButton"]');
+    const inputGen = formRef.current.querySelector('#genero');
+    const inputAge = formRef.current.querySelector('#idade');
+    const inputEstado = formRef.current.querySelector('#estado_civil');
+    const inputRenda = formRef.current.querySelector('#faixa_renda');
     formButton.textContent = 'Carregando';
     formButton.nextElementSibling.classList.remove('button__loading_disabled');
     formButton.parentElement.parentElement.parentElement.nextElementSibling.classList.add(
@@ -148,6 +153,18 @@ function Quizz() {
     if (typeof data[0].bloco === 'string' && data[0].bloco.trim() !== '')
       setTextInPage(`Você deve ir para ${data[0].bloco}`);
   };
+      setFormData({
+        genero: null,
+        idade: null,
+        estado_civil: null,
+        faixa_renda: null,
+      });
+      inputGen.selectedIndex = 'null';
+      inputAge.value = '';
+      inputEstado.selectedIndex = 'null';
+      inputRenda.selectedIndex = 'null';
+    }
+  }
 
   useEffect(() => {
     const { genero, idade, estado_civil, faixa_renda } = formData;
@@ -312,7 +329,7 @@ function Quizz() {
   return (
     <div className='quizz'>
       <h2 className='quizz__title'>Descubra qual é o seu bloco ideal</h2>
-
+      <h3>Repita quantas vezes quiser</h3>
       <div className='quizz__container'>
         <form
           className='form'

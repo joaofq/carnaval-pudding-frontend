@@ -39,6 +39,10 @@ function MaritalStatusChart() {
       },
     },
     legend: { offsetY: 20 },
+    accessibility: {
+      enabled: true,
+      description: 'Gráfico de barras de avaliação geral por faixa etária',
+    },
   };
 
   const series = [309, 72, 1174, 15, 11];

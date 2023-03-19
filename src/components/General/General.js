@@ -30,12 +30,12 @@ function General() {
             espaço para todos curtirem!
           </p>
         </div>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='percentual de foliões por estado civil'>
           <MaritalStatusChart />
         </div>
       </div>
       <div className='section__container reverse'>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='avialiação por faixa de renda'>
           <AvalIncomeChart />
         </div>
         <div className='section__text'>
@@ -48,7 +48,7 @@ function General() {
           </p>
         </div>
       </div>
-      <div className='general__divisor'></div>
+      <div className='general__divisor' aria-label="pessoas dançando"></div>
     </div>
   );
 }

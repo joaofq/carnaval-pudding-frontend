@@ -18,10 +18,10 @@ function Visitors() {
         mais da farra.
       </p>
       <div className='section__container'>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='avaliação por gênero'>
           <AvalGeneroChart />
         </div>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='avaliação por faixa de renda'>
           <AvalAgeChart />
         </div>
       </div>
@@ -31,10 +31,10 @@ function Visitors() {
         o carnaval é simplesmente a festa mais democrática!
       </p>
       <div className='section__container'>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='avaliação geral por bloco'>
           <AvalBlocoChart />
         </div>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='avaliação geral por nível de gastos'>
           <AvalSpentChart />
         </div>
       </div>
@@ -56,12 +56,12 @@ function Visitors() {
             mostrar os meios mais usados para chegar em Belo Horizonte.
           </p>
         </div>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='percentual de foliões por região'>
           <PeoplesRegionChart />
         </div>
       </div>
       <div className='section__container reverse'>
-        <div className='section__chart'>
+        <div className='section__chart' aria-label='meios de transporte utilizados pelos visitantes'>
           <PeoplesTransportationChart />
         </div>
         <div className='section__text'>
@@ -90,7 +90,7 @@ function Visitors() {
         geral. Se arranjar uma hospedagem na casa de alguém fica bem mais em
         conta!
       </p>
-      <div className='big-chart'>
+      <div className='big-chart' aria-label='gastos dos visitantes por categoria'>
         <SpentCategoriesChart />
       </div>
       <h1 className='section__title'>3 figuras carimbadas do Carnaval de BH</h1>
@@ -114,7 +114,7 @@ function Visitors() {
         oferecer. Sem ter dinheiro como um empecilho, os bens-de-vida não perdem
         tempo na hora de se divertir.
       </p>
-      <div className='visitors__end-image'></div>
+      <div className='visitors__end-image' aria-label="pessoas acenando"></div>
     </div>
   );
 }

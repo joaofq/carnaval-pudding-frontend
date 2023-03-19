@@ -39,6 +39,10 @@ function PeoplesTransportationChart() {
       },
     },
     legend: { offsetY: 20 },
+    accessibility: {
+      enabled: true,
+      description: 'Gráfico de barras de avaliação geral por faixa etária',
+    },
   };
 
   const series = seriesData;
