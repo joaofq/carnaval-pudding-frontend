@@ -1,5 +1,4 @@
 import './visitors.css';
-import graficoteste from '../../images/graficoteste.png';
 import AvalGeneroChart from '../Charts/AvalGeneroChart/AvalGeneroChart';
 import AvalAgeChart from '../Charts/AvalAgeChart/AvalAgeChart';
 import AvalBlocoChart from '../Charts/AvalBlocoChart/AvalBlocoChart';
@@ -75,6 +74,7 @@ function Visitors() {
             <a
               href='https://www.temqueir.com.br/2017/01/trem-da-vale-vitoria-minas.html#:~:text=Partiu%3F,Belo%20Horizonte%2C%20em%20Minas%20Gerais'
               target='_blank'
+              rel='noreferrer'
             >
               nessa página
             </a>
