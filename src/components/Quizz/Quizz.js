@@ -132,7 +132,7 @@ function Quizz() {
     e.preventDefault();
     const formButton = formRef.current.querySelector('button[name="formButton"]');
     formButton.textContent = 'Carregando';
-    formButton.nextElementSibling.classList.remove('button__loading_disabled');
+    formButton.nextElementSibling.nextElementSibling.classList.remove('button__loading_disabled');
     formButton.parentElement.parentElement.parentElement.nextElementSibling.classList.add('button__loading_disabled')
     const data = await api.getInfo([formData]);
     if (typeof data[0].bloco === "string" && data[0].bloco.trim() !== "")
@@ -192,7 +192,7 @@ function Quizz() {
   const theSetterInPage = (bloco, subTitleElement, textElement, titleElement, arg) => {
     const formButton = formRef.current.querySelector('button[name="formButton"]');
     formButton.textContent = 'Enviar';
-    formButton.nextElementSibling.classList.add('button__loading_disabled');
+    formButton.nextElementSibling.nextElementSibling.classList.add('button__loading_disabled');
     subTitleElement.textContent = bloco.title;
     textElement.textContent = bloco.text;
     if (arg == 'Você deve ir para Batiza')
@@ -206,8 +206,8 @@ function Quizz() {
 
   return (
     <div className='quizz'>
-      <h2 className='quizz__title'>Descubra qual é o seu bloco dieal</h2>
-      <h3>Nenhum dado será coletado</h3>
+      <h2 className='quizz__title'>Descubra qual é o seu bloco ideal</h2>
+
       <div className='quizz__container'>
         <form className='form' name='form' onSubmit={handleFormSubmit} ref={formRef}>
           <div className='inputs__container'>
@@ -255,6 +255,7 @@ function Quizz() {
           </div>
           <div className='form__button__container'>
             <button type='submit' name="formButton" className='form__button form__button_disabled' disabled>Enviar</button>
+            <h3 className='form__text'>Nenhum dado será coletado</h3>
             <div className='button__loading button__loading_disabled'></div>
           </div>
         </form >
