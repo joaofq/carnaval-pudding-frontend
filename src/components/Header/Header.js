@@ -7,20 +7,17 @@ function Header() {
   return (
     <>
       <div id="header" className="header">
-        <img src={pessoasDancando} className='header__image'></img>
-        <div>
-          <img
-            src={mascara}
-            alt="Máscara amarela"
-            className="header__logo"
-          />
-        </div>
-        <img src={pessoasDancando} className='header__image'></img>
+        <img
+          src={mascara}
+          alt="Máscara amarela"
+          className="header__logo" />
+        <h1 className="header__title">Carnaval Pudding</h1>
+        <p className="header__subtitle">
+          Uma análise de dados sobre o Carnaval de Belo Horizonte
+        </p>
       </div>
-      <h1 className="header__title">Carnaval Pudding</h1>
-      <p className="header__subtitle">
-        Uma análise de dados sobre o Carnaval de Belo Horizonte
-      </p></>
+
+    </>
   );
 }
 

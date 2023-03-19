@@ -1,14 +1,18 @@
-.general {
-  border-radius: .3125rem;
-  max-width: 80%;
-  margin: 0 auto;
-  background-color: crimson;
-}
-
 .general__divisor {
   background: url('../../images/pessoasjovens.jpg');
   background-size: cover;
   height: 550px;
+}
+
+.general__division {
+  background-image: linear-gradient(to bottom, #f2bd00, #fedd74);
+  height: 16px;
+  width: 100%;
+}
+
+.general__container {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 20rem) and (max-width: 767px) {

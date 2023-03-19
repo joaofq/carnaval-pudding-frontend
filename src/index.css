@@ -13,6 +13,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  text-align: justify;
 }
 
 * {
@@ -30,16 +31,19 @@ code {
 }
 
 .section__text {
+  text-align: justify;
   max-width: 500px;
 }
 
 .section__quote {
+  text-align: justify;
   color: black;
   margin-top: 50px;
   font-weight: bold;
 }
 
 .section__paragraph {
+  text-align: justify;
   margin: 0 auto;
   margin-top: 50px;
   color: black;
@@ -47,6 +51,7 @@ code {
 }
 
 .section__paragraph a {
+  text-align: justify;
   color: black;
   text-decoration: none;
 }
@@ -78,4 +83,11 @@ code {
 
 .section__image {
   width: 100%;
+}
+
+@media screen and (min-width: 20rem) and (max-width: 767px) {
+  .section__paragraph {
+    margin-top: 0;
+    margin-bottom: .375rem;
+  }
 }
