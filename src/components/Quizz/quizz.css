@@ -183,6 +183,11 @@
   flex-direction: column;
 }
 
+.form__text {
+  font-size: .75rem;
+  font-weight: 400;
+}
+
 @media screen and (min-width: 20rem) and (max-width: 767px) {
   .input__left {
     display: flex;
@@ -206,10 +211,6 @@
   .form__select {
     width: 80%;
   }
-
-  /* .form__select{
-    width: 20%;
-  } */
 
   .input__container {
     display: flex;
