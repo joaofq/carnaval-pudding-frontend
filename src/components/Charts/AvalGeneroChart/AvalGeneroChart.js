@@ -1,10 +1,13 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/avalGenero';
 
 function AvalGeneroChart() {
+  const categories = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num * 10) / 10;
+  });
   const options = {
-    xaxis: {
-      categories: ['Feminino', 'Masculino'],
-    },
+    xaxis: { categories: categories },
     dataLabels: {
       enabled: false,
     },
@@ -29,11 +32,7 @@ function AvalGeneroChart() {
     },
   };
 
-  const series = [
-    {
-      data: [5.1, 5.3],
-    },
-  ];
+  const series = [{ data: seriesData }];
 
   return <Chart options={options} series={series} type='bar' width='100%' />;
 }

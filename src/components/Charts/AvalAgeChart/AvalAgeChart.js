@@ -1,15 +1,14 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/avalAge';
 
 function AvalGeneroChart() {
+  const categories = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num * 10) / 10;
+  });
+
   const options = {
-    xaxis: {
-      categories: [
-        '16 a 24 anos',
-        '25 a 39 anos',
-        '40 a 59 anos',
-        'acima de 60 anos',
-      ],
-    },
+    xaxis: { categories: categories },
     dataLabels: {
       enabled: false,
     },
@@ -33,11 +32,7 @@ function AvalGeneroChart() {
     },
   };
 
-  const series = [
-    {
-      data: [5.2, 5.1, 5.3, 5.8],
-    },
-  ];
+  const series = [{ data: seriesData }];
 
   return <Chart options={options} series={series} type='bar' width='100%' />;
 }

@@ -1,20 +1,18 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/spentCategories';
 
 function SpentCategoriesChart() {
+  const categories = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num);
+  });
+
   const options = {
-    xaxis: {
-      categories: [
-        'Hospedagem',
-        'Passeios',
-        'Transporte',
-        'Compras',
-        'Ingressos',
-      ],
-    },
+    xaxis: { categories: categories },
     dataLabels: {
       enabled: false,
     },
-    colors: ['#0455BF', '#05C7F2', '#D95204', '#0468BF', '#EEAF24'],
+    colors: ['#0455BF', '#05C7F2', '#D95204', '#90BFE0', '#EEAF24'],
     plotOptions: {
       bar: {
         distributed: true,
@@ -34,11 +32,7 @@ function SpentCategoriesChart() {
     },
   };
 
-  const series = [
-    {
-      data: [737, 266, 201, 177, 173],
-    },
-  ];
+  const series = [{ data: seriesData }];
 
   return <Chart options={options} series={series} type='bar' width='100%' />;
 }

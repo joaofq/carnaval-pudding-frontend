@@ -5,7 +5,7 @@ function MaritalStatusChart() {
     stroke: {
       width: 0,
     },
-    colors: ['#0455BF', '#05C7F2', '#D95204', '#0468BF', '#EEAF24'],
+    colors: ['#0455BF', '#05C7F2', '#D95204', '#90BFE0', '#EEAF24'],
     labels: [
       'Casado (a)',
       'Divorciado (a)',

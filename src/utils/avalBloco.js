@@ -1,20 +1,21 @@
 const data = {
   categories: [
     'Baianas Ozadas',
+    'Beiço do Wando',
     'Bloco Angola Janga',
     'Bloco Despedida de Carnaval',
     'Bloco Havayanas Usadas',
-    'Entao Brilha',
+    'Então Brilha',
     'Juventude Bronzeada',
-    'MONOBLOCO',
-    'Outros',
-    'Quando come se lambuza',
+    'Monobloco',
     'Tchanzinho Zona Norte',
+    'Quando come se lambuza',
+    'Outros',
   ],
   data: [
-    5.106870229007634, 4.590163934426229, 5.860869565217391, 7.035714285714286,
-    5.758620689655173, 5.242105263157895, 4.347014925373134, 5.505434782608695,
-    4.458823529411765, 6.229166666666667,
+    5.078066914498141, 6.5675675675675675, 4.574074074074074, 5.819672131147541,
+    7.035714285714286, 5.778523489932886, 5.254901960784314, 4.350364963503649,
+    6.229166666666667, 4.447058823529412, 5.28,
   ],
 };
 

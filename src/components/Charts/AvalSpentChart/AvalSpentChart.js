@@ -1,10 +1,14 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/avalSpent';
 
 function AvalSpentChart() {
+  const categories = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num * 10) / 10;
+  });
+
   const options = {
-    xaxis: {
-      categories: ['Baixo', 'Médio', 'Alto', 'Muito alto'],
-    },
+    xaxis: { categories: categories },
     dataLabels: {
       enabled: false,
     },
@@ -28,11 +32,7 @@ function AvalSpentChart() {
     },
   };
 
-  const series = [
-    {
-      data: [5.2, 4.8, 4.9, 1],
-    },
-  ];
+  const series = [{ data: seriesData }];
 
   return <Chart options={options} series={series} type='bar' width='100%' />;
 }

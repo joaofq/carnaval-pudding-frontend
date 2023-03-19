@@ -1,19 +1,18 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/avalIncome';
 
 function AvalIncomeChart() {
+  const categories = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num * 10) / 10;
+  });
+
   const options = {
-    xaxis: {
-      categories: [
-        'Até um salário mínimo (R$ 954,00)',
-        'De 2 a 4 salários (R$ 1.908,00 - R$ 3.816,00)',
-        'De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)',
-        'Acima de 8 salários (acima de R$ 7.632,00)',
-      ],
-    },
+    xaxis: { categories: categories },
     dataLabels: {
       enabled: false,
     },
-    colors: ['#0455BF', '#05C7F2', '#D95204', '#EEAF24'],
+    colors: ['#0455BF', '#05C7F2', '#D95204', '#EEAF24', '#90BFE0'],
     plotOptions: {
       bar: {
         distributed: true,
@@ -34,11 +33,7 @@ function AvalIncomeChart() {
     },
   };
 
-  const series = [
-    {
-      data: [5.2, 5.0, 5.3, 5.09],
-    },
-  ];
+  const series = [{ data: seriesData }];
 
   return <Chart options={options} series={series} type='bar' width='100%' />;
 }

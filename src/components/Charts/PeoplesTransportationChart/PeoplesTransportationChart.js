@@ -1,12 +1,18 @@
 import Chart from 'react-apexcharts';
+import data from '../../../utils/peoplesTransportation';
 
 function PeoplesTransportationChart() {
+  const labels = data.categories;
+  const seriesData = data.data.map((num) => {
+    return Math.round(num * 10) / 10;
+  });
+
   const options = {
     stroke: {
       width: 0,
     },
-    colors: ['#0455BF', '#05C7F2', '#EEAF24', '#0468BF', '#D95204'],
-    labels: ['Avião', 'Carro', 'Trem', 'Uber/Taxi/Carona', 'Ônibus'],
+    colors: ['#0455BF', '#05C7F2', '#EEAF24', '#90BFE0', '#D95204'],
+    labels: labels,
     plotOptions: {
       pie: {
         startAngle: 0,
@@ -35,7 +41,7 @@ function PeoplesTransportationChart() {
     legend: { offsetY: 20 },
   };
 
-  const series = [26, 87, 10, 17, 71];
+  const series = seriesData;
 
   return <Chart options={options} series={series} type='pie' width='100%' />;
 }
