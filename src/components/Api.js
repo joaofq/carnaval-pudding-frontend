@@ -6,18 +6,19 @@ export default class Api {
   }
 
   _checkResponse(res) {
-    if (!res.ok)
-      return Promise.reject(`${res.status} error!`);
+    if (!res.ok) return Promise.reject(`${res.status} error!`);
     return res.json();
   }
 
   getInfo(data) {
     const encodedData = encodeURIComponent(JSON.stringify(data));
-    return fetch(`${this._link}${this._token}&flow_key=${this._key}&data=${encodedData}`, {
-      headers: {
-        authorization: this._token
-      },
-    })
-      .then(res => this._checkResponse(res));
+    return fetch(
+      `${this._link}${this._token}&flow_key=${this._key}&data=${encodedData}`,
+      {
+        headers: {
+          authorization: this._token,
+        },
+      }
+    ).then((res) => this._checkResponse(res));
   }
 }

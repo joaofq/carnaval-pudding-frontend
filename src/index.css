@@ -16,10 +16,6 @@ code {
   text-align: justify;
 }
 
-* {
-  font-size: 22px;
-}
-
 .section__title {
   color: black;
   font-size: 2.5em;
@@ -28,6 +24,9 @@ code {
 .section__subtitle {
   color: black;
   font-size: 1.2em;
+  margin-top: 50px;
+  color: #0455bf;
+  font-size: 55px;
 }
 
 .section__text {
@@ -54,6 +53,7 @@ code {
   text-align: justify;
   color: black;
   text-decoration: none;
+  font-size: 22px;
 }
 
 .section__container {
@@ -70,6 +70,7 @@ code {
   max-width: 500px;
   padding: 0;
   margin-top: 50px;
+  text-align: left;
 }
 
 .chart {
@@ -79,6 +80,8 @@ code {
 
 .big-chart {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .section__image {

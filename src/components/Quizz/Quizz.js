@@ -3,22 +3,21 @@ import React, { useState, useRef, useEffect } from 'react';
 import { api } from '../..';
 
 function Quizz() {
-
   const blocoBahianasOusadas = {
     title: 'Baianas Ozadas',
     text: `Que tal curtir o Carnaval de Belo Horizonte do jeito baiano com saias, turbantes e balangandãs?
     O bloco Baianas Ozadas trouxe à festa um tempero novinho em folha: os ritmos e músicas da
     Bahia com muita irreverência e originalidade. A "ozadia" é contagiante e fez o bloco ser seguido
-    por mais de 500 mil foliões no Carnaval de 2019. Partiu curtir esse agito?`
-  }
+    por mais de 500 mil foliões no Carnaval de 2019. Partiu curtir esse agito?`,
+  };
 
   const blocoMonobloco = {
     title: 'Monobloco',
     text: `O Monobloco é um dos blocos mais conhecidos do Rio de Janeiro, e agora vai fazer a alegria dos
     foliões em Belo Horizonte! Com 150 integrantes em sua bateria, eles comandam o som com
     surdos, caixas, chocalhos, tamborins, agogôs, repique e cuíca. E aí, preparado para dançar até
-    cansar? Vem com o Monobloco que a festa tá garantida!`
-  }
+    cansar? Vem com o Monobloco que a festa tá garantida!`,
+  };
 
   const blocoEntaoBrilha = {
     title: 'Então Brilha',
@@ -26,40 +25,40 @@ function Quizz() {
     alegria e diversidade às ruas da capital mineira. E, claro, muita música boa para fazer o Carnaval
     Análise blocos de carnaval 2
     de rua ressurgir com força total! Afinal, como eles mesmos dizem, "gente é pra brilhar"! Então,
-    não fique fora dessa festa! Vem brilhar com o Então, Brilha!`
-  }
+    não fique fora dessa festa! Vem brilhar com o Então, Brilha!`,
+  };
 
   const blocoDespedidaDeCarnaval = {
     title: 'Despedida de Carnaval',
     text: `Se você é daqueles que não quer que o Carnaval acabe nunca, então o bloco da Despedida de
     Carnaval é perfeito para você! Criado em 2015 em homenagem ao Bloco da Saudade, ele é a
     desculpa perfeita para prolongar a folia e dizer adeus ao Carnaval com chave de ouro! Então,
-    bora curtir a saidêra e se despedir da festa mais animada do ano em grande estilo!`
-  }
+    bora curtir a saidêra e se despedir da festa mais animada do ano em grande estilo!`,
+  };
 
   const blocoJuventudeBronzeada = {
     title: 'Juventude Bronzeada',
     text: `Quer dar uma agitada na sua vida no Carnaval de Belo Horizonte? Então vem conhecer o
     Juventude Bronzeada! Criado em 2013, esse bloco é pura animação e política. Além de fomentar
     a festa mais animada do ano, eles querem mudar o mundo! Então, bora curtir uma festa cheia de
-    ritmo e mudança!`
-  }
+    ritmo e mudança!`,
+  };
 
   const blocoQuandoComeSeLambuza = {
     title: 'Quando come se lambuza',
     text: `Olha só quem chegou: o bloco Quando Come Se Lambuza! Desde 2014, esse bloco tem feito a
     alegria das ruas de Belo Horizonte com seu som contagiante! Com cerca de 180 ritmistas e
     instrumentos de escola de samba, esse bloco é garantia de muita diversão! Então, bora se jogar
-    nesse bloco delicioso e se lambuzar de música boa!`
-  }
+    nesse bloco delicioso e se lambuzar de música boa!`,
+  };
 
   const blocoAngolaJanga = {
     title: 'Bloco Angola Janga',
     text: `Afrocentrado, o Bloco Angola Janga busca criar mais um espaço negro no Carnaval de BH.
     Tocando desde ritmos afro-brasileiros mais antigos até os mais recentes, você vai ouvir de axé a
     hip-hop enquanto acompanha seu percurso. Aqui, a folia dá espaço também para reflexão e
-    construção de uma cultura brasileira mais inclusiva.`
-  }
+    construção de uma cultura brasileira mais inclusiva.`,
+  };
 
   const blocoHavayanasUsadas = {
     title: 'Havayanas Usadas',
@@ -67,15 +66,15 @@ function Quizz() {
     batuqueiros, que transformam até latinha vazia em instrumento musical. Ele é famoso por
     Análise blocos de carnaval 3
     arrastar multidões pelas ruas belo-horizontinas, saindo pelas ruas do bairro Pompeia, na região
-    Leste da capital mineira.`
-  }
+    Leste da capital mineira.`,
+  };
 
   const blocoTchanzinhoZonaNorte = {
     title: 'Tchanzinho Zona Norte',
     text: `Segura o Tchanzinho Zona Norte! É isso mesmo, um bloco focado em tocar as músicas da
     saudosa banda de axé dos anos 90, É O Tchan! Mas não é só isso, o repertório também é
-    antenado e contempla os ritmos mais modernos, como funk, piseiro e arrocha.`
-  }
+    antenado e contempla os ritmos mais modernos, como funk, piseiro e arrocha.`,
+  };
 
   const blocoBeijoDoWando = {
     title: 'Beijo do Wando',
@@ -83,28 +82,31 @@ function Quizz() {
     provar que nem só de axé vive o Carnaval, o bloco Beijo do Wando já teve até a Gretchen em seu
     trio elétrico. Além de Wando, músicas de Reginaldo Rossi, Sidney Magal, Roupa Nova, entre
     outros artistas românticos, complementam o repertório durante o cortejo. Tocando nessa festa, há
-    uma bateria com 350 integrantes e uma banda com 8.`
-  }
+    uma bateria com 350 integrantes e uma banda com 8.`,
+  };
 
   const blocoOutros = {
     title: 'Outros',
     text: `Você é incrível demais pra que a gente te indique só um bloco. Por isso, te indicamos o
     CARNAVAL INTEIRO! É isso mesmo, não há dúvidas que você vai se divertir muito brincando
     em BH, e a certeza é tanta que te indicamos só ir. Curta o axé, o brega, o funk, o samba sem
-    preocupações. Você é de casa!`
-  }
+    preocupações. Você é de casa!`,
+  };
 
   const [formData, setFormData] = useState({
     genero: null,
     idade: null,
     estado_civil: null,
-    faixa_renda: null
+    faixa_renda: null,
   });
 
   const formRef = useRef(null);
 
   const handleInputChange = (event) => {
-    const value = event.target.name === 'idade' ? parseInt(event.target.value) : event.target.value;
+    const value =
+      event.target.name === 'idade'
+        ? parseInt(event.target.value)
+        : event.target.value;
     setFormData({
       ...formData,
       [event.target.name]: value,
@@ -210,7 +212,7 @@ function Quizz() {
               <input id='idade' name='idade' className='form__select' onChange={handleInputChange} />
               <span id='age__error' className='form__error form__error_disabled'>A idade deve ser um número inteiro maior que 0 e menor que 150</span>
             </div>
-          </div>
+          </div >
           <div className='form__container'>
             <label htmlFor='estado_civil' className='form__label'>Estado Civil</label>
             <select id='estado_civil' name='estado_civil' className='form__select' onChange={handleInputChange} defaultValue="null">
@@ -232,12 +234,12 @@ function Quizz() {
               <option value='De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)'>De 4 a 8 salários (R$ 3.816,00 - R$ 7.632,00)</option>
               <option value='Acima de 8 salários (acima de R$ 7.632,00)'>Acima de 8 salários (acima de R$ 7.632,00)</option>
             </select>
-          </div>
+          </div >
           <div className='form__button__container'>
             <button type='submit' name="formButton" className='form__button form__button_disabled' disabled>Enviar</button>
           </div>
-        </form>
-      </div>
+        </form >
+      </div >
       <div className='result__container'>
         <h3 id='title' className='result__title'></h3>
         <h4 id='subTitle' className='result__subtitle'></h4>
