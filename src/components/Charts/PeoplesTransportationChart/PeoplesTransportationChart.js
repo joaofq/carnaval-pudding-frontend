@@ -32,15 +32,7 @@ function PeoplesTransportationChart() {
 
   const series = [26, 87, 10, 17, 71];
 
-  return (
-    <Chart
-      options={options}
-      series={series}
-      type='pie'
-      width='500px'
-      height='400px'
-    />
-  );
+  return <Chart options={options} series={series} type='pie' width='100%' />;
 }
 
 export default PeoplesTransportationChart;

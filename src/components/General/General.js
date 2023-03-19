@@ -1,4 +1,5 @@
 import './general.css';
+import graficoteste from '../../images/graficoteste.png';
 import MaritalStatusChart from '../Charts/MaritalStatusChart/MaritalStatusChart';
 import AvalIncomeChart from '../Charts/AvalIncomeChart/AvalIncomeChart';
 

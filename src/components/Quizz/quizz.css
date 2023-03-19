@@ -23,8 +23,26 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.875rem;
   align-items: flex-end;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .form__select {
@@ -44,16 +62,34 @@
 
 .form__container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.375rem;
   margin: 0;
 }
 
+.inputs__container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 .result__title,
 .result__subtitle,
 .result__text {
   margin: 0;
+}
+
+.result__subtitle {
+  display: none;
+}
+
+.result__text {
+  text-align: justify;
 }
 
 .form__button {
@@ -136,7 +172,7 @@
   }
 
   .form__select {
-    width: 80%;
+    width: 6.25rem
   }
 
   .input__container {
@@ -145,5 +181,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .form__label {
+    font-size: .75rem;
   }
 }

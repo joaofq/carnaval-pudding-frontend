@@ -1,40 +1,4 @@
-.general__divisor {
-  background: url('../../images/pessoasjovens.jpg');
-  background-size: cover;
-  height: 550px;
-}
-
-.general__division {
-  background-image: linear-gradient(to bottom, #f2bd00, #fedd74);
-  height: 16px;
-  width: 100%;
-}
-
-.general__container {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 20rem) and (max-width: 767px) {
-  .general {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    max-width: 96%;
-    margin: 0 auto;
-    margin-top: .3125rem;
-    padding-right: 0;
-    padding-left: 0;
-    height: auto;
-    max-height: 105rem;
-    border-radius: .3125rem .3125rem 0 0;
-  }
-
-  .general__divisor {
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-  }
+.general {
+  max-width: 90%;
+  margin: 90px auto;
 }
