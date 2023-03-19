@@ -425,14 +425,6 @@ function Quizz() {
             >
               Enviar
             </button>
-            <button
-              type='submit'
-              name='formButton'
-              className='form__button form__button_disabled'
-              disabled
-            >
-              Enviar
-            </button>
             <h3 className='form__text'>Nenhum dado será coletado</h3>
             <div className='button__loading button__loading_disabled'></div>
           </div>
