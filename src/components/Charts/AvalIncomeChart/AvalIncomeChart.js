@@ -13,7 +13,7 @@ function AvalIncomeChart() {
     dataLabels: {
       enabled: false,
     },
-    colors: ['#0455BF', '#05C7F2', '#D95204', '#0468BF'],
+    colors: ['#0455BF', '#05C7F2', '#D95204', '#EEAF24'],
     plotOptions: {
       bar: {
         distributed: true,
@@ -21,7 +21,7 @@ function AvalIncomeChart() {
       },
     },
     title: {
-      text: 'Avaliação geral por faxa de renda',
+      text: 'Avaliação geral por faixa de renda',
       align: 'center',
       style: {
         fontSize: '14px',
