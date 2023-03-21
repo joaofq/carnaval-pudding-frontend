@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/carnaval-pudding-frontend/static/css/main.6afe174a.css",
+    "main.js": "/carnaval-pudding-frontend/static/js/main.f24eb054.js",
+    "static/js/787.c6caf7b9.chunk.js": "/carnaval-pudding-frontend/static/js/787.c6caf7b9.chunk.js",
+    "static/media/confetti-que-fazem-um-circulo.jpg": "/carnaval-pudding-frontend/static/media/confetti-que-fazem-um-circulo.46288c68d2c67c3a6e4b.jpg",
+    "static/media/dancandoSemFundo.png": "/carnaval-pudding-frontend/static/media/dancandoSemFundo.f3e75d7490bd4b5ccb7e.png",
+    "static/media/pessoasDancando.jpg": "/carnaval-pudding-frontend/static/media/pessoasDancando.81f46bcec69b24f0c596.jpg",
+    "static/media/mascara.png": "/carnaval-pudding-frontend/static/media/mascara.2b2781f8f9aef1751189.png",
+    "static/media/loading.gif": "/carnaval-pudding-frontend/static/media/loading.e2ab242448966cc4efe0.gif",
+    "index.html": "/carnaval-pudding-frontend/index.html",
+    "main.6afe174a.css.map": "/carnaval-pudding-frontend/static/css/main.6afe174a.css.map",
+    "main.f24eb054.js.map": "/carnaval-pudding-frontend/static/js/main.f24eb054.js.map",
+    "787.c6caf7b9.chunk.js.map": "/carnaval-pudding-frontend/static/js/787.c6caf7b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6afe174a.css",
+    "static/js/main.f24eb054.js"
+  ]
+}
