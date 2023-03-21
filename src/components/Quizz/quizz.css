@@ -81,9 +81,19 @@
 }
 
 .result__title,
-.result__subtitle,
-.result__text {
+.result__subtitle {
   margin: 0;
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.result__text {
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .result__title {

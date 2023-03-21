@@ -1,7 +1,6 @@
 @import url(./vendor/normalize.css);
 
 body {
-  /* max-width: 1280px; */
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,10 +15,15 @@ code {
     monospace;
 }
 
+.main {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 960px;
+}
+
 .section__title {
   color: #0455bf;
   font-size: 2.25rem;
-  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
@@ -30,10 +34,6 @@ code {
   font-size: 31px;
 }
 
-.section__text {
-  max-width: 500px;
-}
-
 .section__quote {
   margin-top: 50px;
   font-weight: bold;
@@ -42,14 +42,14 @@ code {
 .section__paragraph {
   margin: 0 auto;
   margin-top: 50px;
-  font-size: 22px;
+  font-size: 1.3rem;
+  line-height: 1.5;
   text-align: justify;
-  width: 80%;
 }
 
 .section__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -57,7 +57,14 @@ code {
   flex-wrap: wrap-reverse;
 }
 
+.section__text {
+  margin: 0 auto;
+  width: 45%;
+}
+
 .section__chart {
+  margin: 0 auto;
+
   width: 50%;
   max-width: 500px;
   padding: 0;
@@ -82,6 +89,9 @@ code {
     width: 100%;
     max-width: 500px;
   }
+  .section__text {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1016px) {
@@ -89,26 +99,13 @@ code {
     width: 100%;
     max-width: 500px;
   }
-}
-
-@media screen and (min-width: 20rem) and (max-width: 768px) {
-  .section__paragraph {
-    width: 90%;
-  }
-
-  .section__title {
-    width: 90%;
-  }
-
   .section__text {
     width: 100%;
   }
+}
 
-  .section__subtitle {
-    width: 90%;
-  }
-
-  .section__container {
-    width: 100%;
+@media screen and (min-width: 200px) and (max-width: 768px) {
+  .main {
+    width: 95%;
   }
 }
