@@ -321,7 +321,7 @@ function Quizz() {
   };
 
   return (
-    <div className="quizz">
+    <section className="quizz">
       <h2 className="quizz__title">Descubra qual é o seu bloco ideal</h2>
       <h3>Repita quantas vezes quiser</h3>
       <div className="quizz__container">
@@ -446,7 +446,7 @@ function Quizz() {
         <h4 id="subTitle" className="result__subtitle"></h4>
         <p id="text" className="result__text"></p>
       </div>
-    </div>
+    </section>
   );
 }
 
